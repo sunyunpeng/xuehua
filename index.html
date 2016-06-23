@@ -326,6 +326,34 @@ body {position: relative;
 		font-size: 0.15rem;
 		line-height: 0.2rem;
 	}
+	.ksb{
+		background: #487790;
+		width: 30%;
+		position: absolute;
+		bottom:0.5rem;
+		height: 2rem;
+		left: 0;
+		animation: fade-in;/*动画名称*/
+		animation-duration: 1s;/*动画持续时间*/
+		-webkit-animation:fade-in 1s;/*针对webkit内核*/
+	}
+	.tuichu1{
+		width: 0.2rem;
+		height: 0.2rem;
+		position: absolute;
+		top: 0;
+		left: 81%;
+		background: black;
+
+	}
+	.ksList-li{
+		width: 76%;
+		height: 1.8rem;
+		background: #ffffff;
+		margin-top: 0.1rem;
+		margin-left: 2%;
+
+	}
 </style>
 
 </head>
@@ -525,6 +553,12 @@ body {position: relative;
 	}
 
 </script>
+
+<div class="" id="ksList">
+ <div class="" id="cha"></div>
+	<div class="" id="cha2"></div>
+</div>
+
 <footer class="footer">
 <nav class="nav">
 	<a href="javascript:void 0" id="kaishi"></a>
@@ -574,7 +608,9 @@ body {position: relative;
 	var content = document.querySelector(".zt3");
 	var content1 = document.querySelector(".zt4");
 	var song=document.getElementById('song')
-
+    var cha=document.getElementById('cha')
+	var cha2=document.getElementById('cha2')
+	var ksList=document.getElementById('ksList')
 	song.addEventListener("touchend", function () {
 		content1.style.display = "block";
 		content.style.display = "none";
@@ -583,24 +619,40 @@ body {position: relative;
 		content1.style.display = "block";
 		content.style.display = "none";
 	});
+	cha.addEventListener("touchend", function () {
+		ksList.className="";
+		cha2.className="";
+		cha.className="";
+	});
+	cha.addEventListener("click", function () {
+     ksList.className="";
+		cha2.className="";
+		cha.className="";
+
+	});
+
 
 
 </script>
 <script>
 	var gj=document.getElementById('mv')
 	var ks=document.getElementById('kaishi')
+	var ksList=document.getElementById('ksList')
 	var content = document.querySelector(".zt3");
 	var content1 = document.querySelector(".zt4");
 	var song=document.getElementById('song')
-
+	var cha2=document.getElementById('cha2')
 	ks.addEventListener("touchend", function () {
+		ksList.className="ksb"
 		content1.style.display = "none";
 		content.style.display = "none";
-
+        cha2.className="ksList-li";
+		cha.className="tuichu1";
 	});
 	song.addEventListener("click", function () {
 		content1.style.display = "none";
 		content.style.display = "none";
+		cha2.className="ksList-li"
 	});
 
 
