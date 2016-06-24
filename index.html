@@ -361,8 +361,8 @@ body {position: relative;
 
 <div id="page1" class="page1">
 	<p class="zt  company_name" >我的下雪季节</p>
-	<a href="www.baidu.com">
-<!--<a href="mqqwpa://im/chat?chat_type=wpa&uin=973697241">--><p class="zt2">——《说好了幸福呢》</p></a>
+
+<a href="mqqwpa://im/chat?chat_type=wpa&uin=973697241" id="fbt" >--><p class="zt2">——《说好了幸福呢》</p></a>
 	<p class="zt5">你的绘画凌乱着 在这个时刻  </p>
 	<p class="zt6">我想起喷泉旁的白鸽 甜蜜散落了 </p>
 	<p class="zt7">情绪莫名的拉扯 我还爱你呢 </p>
@@ -664,15 +664,24 @@ body {position: relative;
 	var content = document.querySelector(".zt3");
 	var content1 = document.querySelector(".zt4");
 	var song=document.getElementById('song')
-
+    var fbt=document.getElementById('fbt')
 	qq.addEventListener("touchend", function () {
-		window.location.href='mqqwpa://im/chat?chat_type=wpa&uin=973697241';
+		window.location.href='mqqwpa://im/chat?chat_type=wpa&uin=873295152';
 
 
 	});
 	qq.addEventListener("click", function () {
+		window.location.href='mqqwpa://im/chat?chat_type=wpa&uin=873295152';
+	});
+	fbt.addEventListener("touchend", function () {
+		window.location.href='mqqwpa://im/chat?chat_type=wpa&uin=873295152';
+
+
+	});
+	fbt.addEventListener("click", function () {
 		window.location.href='mqqwpa://im/chat?chat_type=wpa&uin=973697241';
 	});
+
 
 
 </script>
